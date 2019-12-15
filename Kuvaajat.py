@@ -17,7 +17,7 @@ kesto = Tulokset[:,2]
 ###################################################################
 
 plt.plot(askel,alkunopeus, 'x')
-plt.xlabel("Käytetty aika-askel (s)",  fontsize = 15)
+plt.xlabel("Käytetty aika-askel dt (s)",  fontsize = 15)
 plt.ylabel("Raketin alkuvauhti v (m/s)", fontsize = 15)
 
 sovitus1 = np.polyfit(askel,alkunopeus,3)
