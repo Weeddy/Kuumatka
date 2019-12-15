@@ -1,4 +1,4 @@
-#dt (s)	Nopeus (m/s)	Matka-aika (h, v0*1.1)
+#dt (s)	Vauhti (m/s)	Matka-aika (h, v0*1.1)
 0.01	11074.93	19.08
 0.1	11075.28	19.08
 1	11078.79	19.11
@@ -12,4 +12,4 @@
 #1000	#16771.74	#ei perille	
 #2000	#24381.42	#ei perille
 
-#Teoreettinen raja-arvo nopeudelle v0 = 11074.88 m/s, kun dt----> 0s
+#Teoreettinen raja-arvo vauhdille v0 = 11074.88 m/s, kun dt----> 0s

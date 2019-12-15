@@ -19,14 +19,14 @@ R = 384400*10**3                # Kuun keskimääräinen etäisyys maasta
 r_l = R                         # Etäisyys lopussa (Kuun etäisyys)
 
 dt = 0.1                        # Iteroinnin aika-askel 
-v =  11075.274                   # Lähtönopeus (muuta tätä)
+v =  11075.274                  # Lähtövauhti (muuta tätä)
 
 F_maa = lambda x: G*M/x**2      # Maan vetovoima
 F_kuu = lambda x: G*m/(R-x)**2  # Kuun vetovoima
 
 #########################################################################
 
-print(f"Lähtönopeus {v} m/s")
+print(f"Lähtövauhti {v} m/s")
 
 t = 0
 sijainti = []
@@ -35,7 +35,7 @@ aika = []
 while x < R-r_kuu:
     
     if v < 0 :
-        print("Raketti ei päässyt kuuhun. Nosta lähtönopeutta.")
+        print("Raketti ei päässyt kuuhun. Nosta lähtövauhtia.")
         break
     
     else:
@@ -53,13 +53,14 @@ while x < R-r_kuu:
 
 if v > 0:
     print("Kuulento onnistunut.")
-    print(f"Raketin nopeus kuussa: {'%.3f'%v} m/s")
+    print(f"Raketin vauhti kuussa: {'%.3f'%v} m/s")
     print(f"Matka-aika {'%.3f'%(t/3600)} h")
     
 plt.plot(aika,sijainti,'.', markersize = 1)
-plt.ylabel("Etäisyys maasta (km)")
-plt.xlabel("Lentoaika (h)")
-    
+plt.ylabel("Etäisyys maasta (km)", fontsize = 15)
+plt.xlabel("Lentoaika (h)", fontsize = 15)
+plt.legend("Sijainti", fontsize = 15)
+plt.show()
 
 ##########################################################################
 
